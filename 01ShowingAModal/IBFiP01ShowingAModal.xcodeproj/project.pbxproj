@@ -12,6 +12,8 @@
 		8A456B2C1DEC8B58006F103C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A456B2B1DEC8B58006F103C /* Assets.xcassets */; };
 		8A456B2F1DEC8B58006F103C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A456B2D1DEC8B58006F103C /* LaunchScreen.storyboard */; };
 		8A456B371DEC8BD8006F103C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A456B361DEC8BD8006F103C /* HomeViewController.swift */; };
+		8A651A321DEC90E300BE7189 /* XiblessResponders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A651A311DEC90E300BE7189 /* XiblessResponders.swift */; };
+		8A651A341DEC923E00BE7189 /* TestXiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A651A331DEC923E00BE7189 /* TestXiblessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		8A456B2E1DEC8B58006F103C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A456B301DEC8B58006F103C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A456B361DEC8BD8006F103C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8A651A311DEC90E300BE7189 /* XiblessResponders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XiblessResponders.swift; sourceTree = "<group>"; };
+		8A651A331DEC923E00BE7189 /* TestXiblessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestXiblessView.swift; sourceTree = "<group>"; };
 		B75CA7088FBA1EDDAC36E63F /* Pods-IBFiP01ShowingAModal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBFiP01ShowingAModal.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBFiP01ShowingAModal/Pods-IBFiP01ShowingAModal.release.xcconfig"; sourceTree = "<group>"; };
 		CBF289229CABC2B8A53C3963 /* Pods_IBFiP01ShowingAModal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBFiP01ShowingAModal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -64,6 +68,8 @@
 				8A456B2D1DEC8B58006F103C /* LaunchScreen.storyboard */,
 				8A456B301DEC8B58006F103C /* Info.plist */,
 				8A456B361DEC8BD8006F103C /* HomeViewController.swift */,
+				8A651A311DEC90E300BE7189 /* XiblessResponders.swift */,
+				8A651A331DEC923E00BE7189 /* TestXiblessView.swift */,
 			);
 			path = IBFiP01ShowingAModal;
 			sourceTree = "<group>";
@@ -207,6 +213,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A651A321DEC90E300BE7189 /* XiblessResponders.swift in Sources */,
+				8A651A341DEC923E00BE7189 /* TestXiblessView.swift in Sources */,
 				8A456B251DEC8B58006F103C /* AppDelegate.swift in Sources */,
 				8A456B371DEC8BD8006F103C /* HomeViewController.swift in Sources */,
 			);
