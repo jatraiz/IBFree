@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		484B62F4400C82B7FB34E396 /* Pods_IBFiP01ShowingAModal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF289229CABC2B8A53C3963 /* Pods_IBFiP01ShowingAModal.framework */; };
 		8A456B251DEC8B58006F103C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A456B241DEC8B58006F103C /* AppDelegate.swift */; };
 		8A456B2C1DEC8B58006F103C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A456B2B1DEC8B58006F103C /* Assets.xcassets */; };
 		8A456B2F1DEC8B58006F103C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A456B2D1DEC8B58006F103C /* LaunchScreen.storyboard */; };
@@ -14,12 +15,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6775E784923B97A4B8485A3C /* Pods-IBFiP01ShowingAModal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBFiP01ShowingAModal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBFiP01ShowingAModal/Pods-IBFiP01ShowingAModal.debug.xcconfig"; sourceTree = "<group>"; };
 		8A456B211DEC8B58006F103C /* IBFiP01ShowingAModal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBFiP01ShowingAModal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A456B241DEC8B58006F103C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A456B2B1DEC8B58006F103C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A456B2E1DEC8B58006F103C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A456B301DEC8B58006F103C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A456B361DEC8BD8006F103C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B75CA7088FBA1EDDAC36E63F /* Pods-IBFiP01ShowingAModal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBFiP01ShowingAModal.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBFiP01ShowingAModal/Pods-IBFiP01ShowingAModal.release.xcconfig"; sourceTree = "<group>"; };
+		CBF289229CABC2B8A53C3963 /* Pods_IBFiP01ShowingAModal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBFiP01ShowingAModal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				484B62F4400C82B7FB34E396 /* Pods_IBFiP01ShowingAModal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +43,8 @@
 			children = (
 				8A456B231DEC8B58006F103C /* IBFiP01ShowingAModal */,
 				8A456B221DEC8B58006F103C /* Products */,
+				E16CD3BA1C0F58BC67E4F425 /* Pods */,
+				CB2961DD14AD6DB0B8273239 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +68,23 @@
 			path = IBFiP01ShowingAModal;
 			sourceTree = "<group>";
 		};
+		CB2961DD14AD6DB0B8273239 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBF289229CABC2B8A53C3963 /* Pods_IBFiP01ShowingAModal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E16CD3BA1C0F58BC67E4F425 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6775E784923B97A4B8485A3C /* Pods-IBFiP01ShowingAModal.debug.xcconfig */,
+				B75CA7088FBA1EDDAC36E63F /* Pods-IBFiP01ShowingAModal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -68,9 +92,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A456B331DEC8B58006F103C /* Build configuration list for PBXNativeTarget "IBFiP01ShowingAModal" */;
 			buildPhases = (
+				F8901E0EE24583ABB17A285E /* [CP] Check Pods Manifest.lock */,
 				8A456B1D1DEC8B58006F103C /* Sources */,
 				8A456B1E1DEC8B58006F103C /* Frameworks */,
 				8A456B1F1DEC8B58006F103C /* Resources */,
+				40BAA8CABDC311668212233F /* [CP] Embed Pods Frameworks */,
+				BA640336AE6EB8679376AEC4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +153,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40BAA8CABDC311668212233F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IBFiP01ShowingAModal/Pods-IBFiP01ShowingAModal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA640336AE6EB8679376AEC4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IBFiP01ShowingAModal/Pods-IBFiP01ShowingAModal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8901E0EE24583ABB17A285E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A456B1D1DEC8B58006F103C /* Sources */ = {
@@ -244,6 +319,7 @@
 		};
 		8A456B341DEC8B58006F103C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6775E784923B97A4B8485A3C /* Pods-IBFiP01ShowingAModal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -257,6 +333,7 @@
 		};
 		8A456B351DEC8B58006F103C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75CA7088FBA1EDDAC36E63F /* Pods-IBFiP01ShowingAModal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
