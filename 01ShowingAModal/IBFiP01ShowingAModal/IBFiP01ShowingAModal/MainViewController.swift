@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 /// This will show the Raizlabs Logo and have a button to present a modal
 final class MainViewController: UIViewController {
 
@@ -43,6 +44,10 @@ final class MainViewController: UIViewController {
 
         return button
     }()
+}
+
+// MARK: - View lifecycle
+extension MainViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
