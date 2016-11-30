@@ -1,7 +1,7 @@
 //
 //
 //  NOTE: this file is from the Anchorage Repo: https://github.com/Raizlabs/Anchorage/blob/master/Source/Anchorage.swift
-//  This file assumes that you are using swift 3.0 or above, and 
+//  This file assumes that you are using swift 3.0 or above. For production purposes we recommend using Cocoapods or Carthage to install Anchorage.  
 //
 //  Anchorage.swift
 //  Anchorage

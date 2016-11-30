@@ -66,7 +66,7 @@ private extension MainViewController {
 
         // Layout
 
-        // The containerView is dynamically sized to fit its content (the topAnchor should match the top of the top most item, the bottomAnchor should match the bottom of the bottom most item)
+        // The containerView's height is dynamically sized to fit its content (the topAnchor should match the top of the top most item, the bottomAnchor should match the bottom of the bottom most item)
         containerView.leftAnchor == view.leftAnchor
         containerView.rightAnchor == view.rightAnchor
         containerView.topAnchor == logoImageView.topAnchor

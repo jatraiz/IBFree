@@ -11,19 +11,19 @@ import UIKit
 extension UIColor {
 
     enum AppColors {
-        static let raizlabsRed = UIColor.color(fromHex: 0xec594d, alpha: 1.0)
+        static let raizlabsRed = UIColor.color(fromHex: 0xec594d)
     }
 
-    /// Generate UIColor from Hex. Adapted from http://stackoverflow.com/a/24196572/4092717
+    /// Generate UIColor from Hex. Adapted from http://stackoverflow.com/a/3532264/4092717
     ///
     /// - Parameters:
     ///   - hex: Int (change # to 0x)
-    ///   - alpha: Double (0 transparent, 1 solid)
+    ///   - alpha: Double, default = 1
     /// - Returns: UIColor
-    class func color(fromHex hex: Int, alpha: Double = 1.0) -> UIColor {
-        let red = Double((hex & 0xFF0000) >> 16) / 255.0
-        let green = Double((hex & 0xFF00) >> 8) / 255.0
-        let blue = Double((hex & 0xFF)) / 255.0
-        return UIColor( red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha:CGFloat(alpha) )
+    private class func color(fromHex hex: Int, alpha: CGFloat = 1.0) -> UIColor {
+        let red = CGFloat((hex & 0xFF0000) >> 16) / 255
+        let green = CGFloat((hex & 0xFF00) >> 8) / 255
+        let blue = CGFloat((hex & 0xFF)) / 255
+        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
 }

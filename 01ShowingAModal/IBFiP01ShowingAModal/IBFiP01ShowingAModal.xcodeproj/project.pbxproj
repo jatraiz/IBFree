@@ -56,7 +56,7 @@
 		8A247B2C1DEF1D5B003A3FF2 /* IBFiP01ShowingAModal */ = {
 			isa = PBXGroup;
 			children = (
-				8A8C776B1DEF7A9D00A7625E /* Extensions */,
+				8A8C776B1DEF7A9D00A7625E /* Apple Extensions */,
 				8A247B411DEF1DCD003A3FF2 /* Anchorage.swift */,
 				8A247B2D1DEF1D5B003A3FF2 /* AppDelegate.swift */,
 				8A247B3F1DEF1D79003A3FF2 /* MainViewController.swift */,
@@ -67,20 +67,12 @@
 			path = IBFiP01ShowingAModal;
 			sourceTree = "<group>";
 		};
-		8A8C776B1DEF7A9D00A7625E /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				8A8C776C1DEF7AA500A7625E /* UIKit */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-		8A8C776C1DEF7AA500A7625E /* UIKit */ = {
+		8A8C776B1DEF7A9D00A7625E /* Apple Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				8A8C776D1DEF7AC500A7625E /* UIColor+AppColors.swift */,
 			);
-			name = UIKit;
+			name = "Apple Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
