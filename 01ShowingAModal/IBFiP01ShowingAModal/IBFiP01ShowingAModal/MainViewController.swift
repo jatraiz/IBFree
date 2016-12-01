@@ -36,9 +36,22 @@ extension MainViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureActions()
         configureView()
     }
     
+}
+
+// MARK: - Actions
+private extension MainViewController {
+
+    func configureActions() {
+        showModalButton.addTarget(self, action: #selector(showModalButtonTapped), for: .touchUpInside)
+    }
+
+    @objc func showModalButtonTapped() {
+        present(ModalViewController(), animated: true, completion: nil)
+    }
 }
 
 // MARK: - View Configuration
