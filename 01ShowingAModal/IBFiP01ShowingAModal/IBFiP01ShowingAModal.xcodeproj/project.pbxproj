@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A246E3E1DF07DBF00A06522 /* PillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A246E3D1DF07DBF00A06522 /* PillButton.swift */; };
+		8A246E401DF09DFA00A06522 /* UIFont+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A246E3F1DF09DFA00A06522 /* UIFont+App.swift */; };
 		8A247B2E1DEF1D5B003A3FF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A247B2D1DEF1D5B003A3FF2 /* AppDelegate.swift */; };
 		8A247B351DEF1D5B003A3FF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A247B341DEF1D5B003A3FF2 /* Assets.xcassets */; };
 		8A247B381DEF1D5B003A3FF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A247B361DEF1D5B003A3FF2 /* LaunchScreen.storyboard */; };
 		8A247B401DEF1D79003A3FF2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A247B3F1DEF1D79003A3FF2 /* MainViewController.swift */; };
 		8A247B421DEF1DCD003A3FF2 /* Anchorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A247B411DEF1DCD003A3FF2 /* Anchorage.swift */; };
-		8A8C776E1DEF7AC500A7625E /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C776D1DEF7AC500A7625E /* UIColor+AppColors.swift */; };
+		8A8C776E1DEF7AC500A7625E /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C776D1DEF7AC500A7625E /* UIColor+App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A246E3D1DF07DBF00A06522 /* PillButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillButton.swift; sourceTree = "<group>"; };
+		8A246E3F1DF09DFA00A06522 /* UIFont+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+App.swift"; sourceTree = "<group>"; };
 		8A247B2A1DEF1D5B003A3FF2 /* IBFiP01ShowingAModal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBFiP01ShowingAModal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A247B2D1DEF1D5B003A3FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A247B341DEF1D5B003A3FF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -23,7 +27,7 @@
 		8A247B391DEF1D5B003A3FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A247B3F1DEF1D79003A3FF2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8A247B411DEF1DCD003A3FF2 /* Anchorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchorage.swift; sourceTree = "<group>"; };
-		8A8C776D1DEF7AC500A7625E /* UIColor+AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
+		8A8C776D1DEF7AC500A7625E /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 				8A247B411DEF1DCD003A3FF2 /* Anchorage.swift */,
 				8A247B2D1DEF1D5B003A3FF2 /* AppDelegate.swift */,
 				8A247B3F1DEF1D79003A3FF2 /* MainViewController.swift */,
+				8A246E3D1DF07DBF00A06522 /* PillButton.swift */,
 				8A247B341DEF1D5B003A3FF2 /* Assets.xcassets */,
 				8A247B361DEF1D5B003A3FF2 /* LaunchScreen.storyboard */,
 				8A247B391DEF1D5B003A3FF2 /* Info.plist */,
@@ -70,7 +75,8 @@
 		8A8C776B1DEF7A9D00A7625E /* Extensions  */ = {
 			isa = PBXGroup;
 			children = (
-				8A8C776D1DEF7AC500A7625E /* UIColor+AppColors.swift */,
+				8A8C776D1DEF7AC500A7625E /* UIColor+App.swift */,
+				8A246E3F1DF09DFA00A06522 /* UIFont+App.swift */,
 			);
 			name = "Extensions ";
 			sourceTree = "<group>";
@@ -146,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A246E3E1DF07DBF00A06522 /* PillButton.swift in Sources */,
 				8A247B2E1DEF1D5B003A3FF2 /* AppDelegate.swift in Sources */,
-				8A8C776E1DEF7AC500A7625E /* UIColor+AppColors.swift in Sources */,
+				8A8C776E1DEF7AC500A7625E /* UIColor+App.swift in Sources */,
 				8A247B421DEF1DCD003A3FF2 /* Anchorage.swift in Sources */,
+				8A246E401DF09DFA00A06522 /* UIFont+App.swift in Sources */,
 				8A247B401DEF1D79003A3FF2 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
