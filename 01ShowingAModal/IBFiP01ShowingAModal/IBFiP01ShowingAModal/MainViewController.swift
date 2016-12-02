@@ -10,7 +10,6 @@ import UIKit
 
 /// This will show the Raizlabs Logo and have a button to present a modal
 final class MainViewController: UIViewController {
-
     /// A container used to center contents, all contents of the view controller should be added as a subview to this view
     fileprivate let containerView = UIView()
 
@@ -33,10 +32,8 @@ final class MainViewController: UIViewController {
 
 // MARK: - View lifecycle
 extension MainViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        modalPresentationStyle = .currentContext
         configureActions()
         configureView()
     }
@@ -48,24 +45,23 @@ extension MainViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
     }
-    
 }
 
 // MARK: - Actions
 private extension MainViewController {
-
     func configureActions() {
         showModalButton.addTarget(self, action: #selector(showModalButtonTapped), for: .touchUpInside)
     }
 
     @objc func showModalButtonTapped() {
-        present(SimpleMessageViewController(withText: "HERE\nIS\nTHE\nMODAL!"), animated: true, completion: nil)
+        let text = "HERE\nIS\nTHE\nMODAL!"
+        let modal = SimpleMessageViewController(withText: text)
+        present(modal, animated: true, completion: nil)
     }
 }
 
 // MARK: - View Configuration
 private extension MainViewController {
-
     enum Appearance {
         static let logoToButtonSpace = CGFloat(30)
     }
@@ -95,5 +91,4 @@ private extension MainViewController {
         showModalButton.centerXAnchor == logoImageView.centerXAnchor
         showModalButton.topAnchor == logoImageView.bottomAnchor + Appearance.logoToButtonSpace
     }
-
 }

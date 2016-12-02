@@ -8,9 +8,9 @@
 
 import UIKit
 
+/// A modal with dark blurred background and light UIStatusBar
 class ModalViewController: UIViewController {
-
-    // MARK - var overrides
+    // MARK - UIViewController var overrides
     override var modalPresentationStyle: UIModalPresentationStyle {
         get {
             return .overFullScreen
@@ -36,16 +36,12 @@ class ModalViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
 }
 
 // MARK: - View lifecycle
 extension ModalViewController {
-
     override func loadView() {
         view = ModalView()
-
- //       modalPresentationCapturesStatusBarAppearance = true
     }
 
     override func viewDidLoad() {
@@ -56,9 +52,7 @@ extension ModalViewController {
 
 // MARK: - ModalViewDelegate
 extension ModalViewController: ModalViewDelegate {
-
     func modalDismissButtonTapped(_ modalView: ModalView) {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
-
 }

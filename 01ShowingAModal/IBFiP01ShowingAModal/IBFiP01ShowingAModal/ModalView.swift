@@ -14,7 +14,6 @@ protocol ModalViewDelegate: class {
 
 /// A UIView with a blurred background and an AllSetDismissButton in the upper left. Implement ModalViewDelegate in the parent view controller to handle dismissal. The owning view controller should also set its presentation style to .overCurrentContext for the blur to work with a presenting view controller.
 final class ModalView: UIView {
-
     weak var delegate: ModalViewDelegate?
 
     fileprivate let blurView: UIVisualEffectView = {
@@ -41,7 +40,6 @@ final class ModalView: UIView {
 
 // MARK: - Actions
 private extension ModalView {
-
     func configureActions() {
         dismissButton.addTarget(self, action: #selector(dismissTapped), for: .touchUpInside)
     }
@@ -53,7 +51,6 @@ private extension ModalView {
 
 // MARK: - View Configuration
 private extension ModalView {
-
     enum Constants {
         static let dismissButtonMarginRight = CGFloat(10)
         static let dismissButtonMarginTop = CGFloat(30)
@@ -78,5 +75,4 @@ private extension ModalView {
         dismissButton.topAnchor == topAnchor + Constants.dismissButtonMarginTop
         dismissButton.rightAnchor == rightAnchor - Constants.dismissButtonMarginRight
     }
-
 }

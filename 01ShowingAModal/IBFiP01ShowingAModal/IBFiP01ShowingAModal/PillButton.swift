@@ -10,7 +10,6 @@ import UIKit
 
 /// An oval button with a solid white line border and raizlabs red background
 final class PillButton: UIButton {
-
     init(title: String) {
         super.init(frame: CGRect.zero)
         configureButton(withTitle: title)
@@ -31,7 +30,6 @@ final class PillButton: UIButton {
 
 // MARK: - UIButton Overrides
 extension PillButton {
-
     override var isEnabled: Bool {
         didSet {
             backgroundColor = isEnabled ? Appearance.backgroundColor : Appearance.backgroundColor.semiTransparent
@@ -47,7 +45,6 @@ extension PillButton {
 
 // MARK: - Button Configuration
 private extension PillButton {
-
     enum Appearance {
         static let backgroundColor = UIColor.App.raizlabsRed
         static let borderColor = UIColor.App.raizlabsRed.cgColor
