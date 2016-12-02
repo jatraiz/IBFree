@@ -1,8 +1,4 @@
 //
-//
-//  NOTE: this file is from the Anchorage Repo: https://github.com/Raizlabs/Anchorage/blob/master/Source/Anchorage.swift
-//  This file assumes that you are using swift 3.0 or above. For production purposes we recommend using Cocoapods or Carthage to install Anchorage.  
-//
 //  Anchorage.swift
 //  Anchorage
 //
@@ -29,6 +25,7 @@
 //  LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 //  OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 import UIKit
 
 public protocol LayoutAnchorType {}
@@ -40,8 +37,10 @@ public protocol LayoutAxisType {}
 extension NSLayoutXAxisAnchor : LayoutAxisType {}
 extension NSLayoutYAxisAnchor : LayoutAxisType {}
 
+#if swift(>=3.0)
 
-// MARK: - Equality Constraints
+    // MARK: - Equality Constraints
+
 @discardableResult public func == (lhs: NSLayoutDimension, rhs: CGFloat) -> NSLayoutConstraint {
     return activate(constraint: lhs.constraint(equalToConstant: rhs))
 }
@@ -96,6 +95,7 @@ extension NSLayoutYAxisAnchor : LayoutAxisType {}
 }
 
 // MARK: - Inequality Constraints
+
 @discardableResult public func <= (lhs: NSLayoutDimension, rhs: CGFloat) -> NSLayoutConstraint {
     return activate(constraint: lhs.constraint(lessThanOrEqualToConstant: rhs))
 }
@@ -203,6 +203,7 @@ extension NSLayoutYAxisAnchor : LayoutAxisType {}
 }
 
 // MARK: - Priority
+
 precedencegroup PriorityPrecedence {
     associativity: none
     higherThan: ComparisonPrecedence
@@ -225,6 +226,7 @@ infix operator ~: PriorityPrecedence
 }
 
 // MARK: Layout Expressions
+
 @discardableResult public func * (lhs: NSLayoutDimension, rhs: CGFloat) -> LayoutExpression<NSLayoutDimension> {
     return LayoutExpression(anchor: lhs, multiplier: rhs)
 }
@@ -295,6 +297,8 @@ infix operator ~: PriorityPrecedence
     return expr
 }
 
+#endif
+
 public struct LayoutExpression<T : LayoutAnchorType> {
 
     var anchor: T?
@@ -312,6 +316,7 @@ public struct LayoutExpression<T : LayoutAnchorType> {
 }
 
 // MARK: - EdgeAnchorsProvider
+
 public protocol AnchorGroupProvider {
 
     var horizontalAnchors: AnchorPair<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> { get }
@@ -372,6 +377,7 @@ extension UILayoutGuide: AnchorGroupProvider {
 }
 
 // MARK: - AnchorGroup
+
 public struct AnchorPair<T: LayoutAxisType, U: LayoutAxisType>: LayoutAnchorType {
     private var first: T
     private var second: U
@@ -402,17 +408,17 @@ public struct AnchorPair<T: LayoutAxisType, U: LayoutAxisType>: LayoutAnchorType
         }
 
         switch (first, anchors.first, second, anchors.second) {
-        // Leading, trailing
+            // Leading, trailing
         case let (firstX as NSLayoutXAxisAnchor, otherFirstX as NSLayoutXAxisAnchor,
                   secondX as NSLayoutXAxisAnchor, otherSecondX as NSLayoutXAxisAnchor):
             return AxisGroup(first: builder.leadingBuilder(firstX, (otherFirstX + c) ~ priority),
                              second: builder.trailingBuilder(secondX, (otherSecondX - c) ~ priority))
-        //Top, bottom
+            //Top, bottom
         case let (firstY as NSLayoutYAxisAnchor, otherFirstY as NSLayoutYAxisAnchor,
                   secondY as NSLayoutYAxisAnchor, otherSecondY as NSLayoutYAxisAnchor):
             return AxisGroup(first: builder.topBuilder(firstY, (otherFirstY + c) ~ priority),
                              second: builder.bottomBuilder(secondY, (otherSecondY - c) ~ priority))
-        //CenterX, centerY
+            //CenterX, centerY
         case let (firstX as NSLayoutXAxisAnchor, otherFirstX as NSLayoutXAxisAnchor,
                   firstY as NSLayoutYAxisAnchor, otherFirstY as NSLayoutYAxisAnchor):
             return AxisGroup(first: builder.leadingBuilder(firstX, (otherFirstX + c) ~ priority),
@@ -463,6 +469,7 @@ public struct EdgeAnchors: LayoutAnchorType {
 }
 
 // MARK: - ConstraintGroup
+
 public struct EdgeGroup {
 
     public var top: NSLayoutConstraint
@@ -492,6 +499,7 @@ public struct AxisGroup {
 }
 
 // MARK: - Constraint Builders
+
 struct ConstraintBuilder {
 
     typealias Horizontal = (NSLayoutXAxisAnchor, LayoutExpression<NSLayoutXAxisAnchor>) -> NSLayoutConstraint
@@ -504,6 +512,7 @@ struct ConstraintBuilder {
     var centerYBuilder: Vertical
     var centerXBuilder: Horizontal
 
+    #if swift(>=3.0)
     init(horizontal: @escaping Horizontal, vertical: @escaping Vertical) {
         topBuilder = vertical
         leadingBuilder = horizontal
@@ -521,17 +530,37 @@ struct ConstraintBuilder {
         centerYBuilder = centerY
         centerXBuilder = centerX
     }
+    #else
+    init(horizontal: Horizontal, vertical: Vertical) {
+        topBuilder = vertical
+        leadingBuilder = horizontal
+        bottomBuilder = vertical
+        trailingBuilder = horizontal
+        centerYBuilder = vertical
+        centerXBuilder = horizontal
+    }
+    init(leading: Horizontal, top: Vertical, trailing: Horizontal, bottom: Vertical, centerX: Horizontal, centerY: Vertical) {
+        leadingBuilder = leading
+        topBuilder = top
+        trailingBuilder = trailing
+        bottomBuilder = bottom
+        centerYBuilder = centerY
+        centerXBuilder = centerX
+    }
+    #endif
+
 }
 
 // MARK: - Constraint Activation
+
 func activate(constraint theConstraint: NSLayoutConstraint, withPriority priority: UILayoutPriority = UILayoutPriorityRequired) -> NSLayoutConstraint {
     // Only disable autoresizing constraints on the LHS item, which is the one definitely intended to be governed by Auto Layout
     if let first = theConstraint.firstItem as? UIView {
         first.translatesAutoresizingMaskIntoConstraints = false
     }
-    
+
     theConstraint.priority = priority
     theConstraint.isActive = true
-    
+
     return theConstraint
 }

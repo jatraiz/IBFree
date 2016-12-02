@@ -1,0 +1,4 @@
+target 'IBFiP01ShowingAModal' do
+  use_frameworks!
+  pod 'Anchorage', '~> 3.0'
+end

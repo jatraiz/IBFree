@@ -6,6 +6,7 @@
 //  Copyright © 2016 Raizlabs. All rights reserved.
 //
 
+import Anchorage
 import UIKit
 
 final class SimpleMessageViewController: ModalViewController {

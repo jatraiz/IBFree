@@ -6,6 +6,7 @@
 //  Copyright © 2016 Raizlabs. All rights reserved.
 //
 
+import Anchorage
 import UIKit
 
 /// An oval button with a solid white line border and raizlabs red background
