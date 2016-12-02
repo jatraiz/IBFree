@@ -9,7 +9,7 @@
 import Anchorage
 import UIKit
 
-/// An oval button with a solid white line border and raizlabs red background
+/// An oval button with a semiTranspareent border and raizlabs red background
 final class PillButton: UIButton {
     init(title: String) {
         super.init(frame: CGRect.zero)
@@ -33,7 +33,7 @@ final class PillButton: UIButton {
 extension PillButton {
     override var isEnabled: Bool {
         didSet {
-            backgroundColor = isEnabled ? Appearance.backgroundColor : Appearance.backgroundColor.semiTransparent
+            alpha = isEnabled ? 1.0 : 0.4
         }
     }
 
@@ -48,7 +48,9 @@ extension PillButton {
 private extension PillButton {
     enum Appearance {
         static let backgroundColor = UIColor.App.raizlabsRed
-        static let borderColor = UIColor.App.raizlabsRed.cgColor
+        static let borderColor = UIColor.lightGray.cgColor
+        static let borderWidth = CGFloat(2)
+        static let disabledFontColor = UIColor.lightGray
         static let font = UIFont.App(type: .helvetica, ofSize: 20)
         static let fontColor = UIColor.white
         static let highlightedBackgroundColor = UIColor.red
@@ -57,16 +59,19 @@ private extension PillButton {
 
     func configureButton(withTitle title: String) {
         setTitle(title, for: .normal)
-
-        layer.borderWidth = 1
+        
+        layer.borderWidth = Appearance.borderWidth
         layer.borderColor = Appearance.borderColor
         layer.cornerRadius = Appearance.size.height / 2.0
         clipsToBounds = true
 
         setTitleColor(Appearance.fontColor, for: .normal)
-        setTitleColor(Appearance.fontColor.semiTransparent, for: .disabled)
+        setTitleColor(Appearance.disabledFontColor, for: .disabled)
+
         backgroundColor = Appearance.backgroundColor
         titleLabel?.font = Appearance.font
+
+        isOpaque = false
 
         // Layout
         heightAnchor == Appearance.size.height

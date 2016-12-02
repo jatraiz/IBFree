@@ -15,11 +15,6 @@ extension UIColor {
         static let raizlabsRed = UIColor.color(fromHex: 0xec594d)
     }
 
-    /// Produce a semi transparent color by setting the color's alpha to 0.8
-    var semiTransparent: UIColor {
-        return self.withAlphaComponent(0.8)
-    }
-
     /// Generate UIColor from Hex. Adapted from http://stackoverflow.com/a/3532264/4092717
     ///
     /// - Parameters:
