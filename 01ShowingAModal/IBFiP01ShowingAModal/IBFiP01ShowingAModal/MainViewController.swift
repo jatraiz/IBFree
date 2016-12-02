@@ -36,8 +36,17 @@ extension MainViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        modalPresentationStyle = .currentContext
         configureActions()
         configureView()
+    }
+
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
     }
     
 }
@@ -50,7 +59,7 @@ private extension MainViewController {
     }
 
     @objc func showModalButtonTapped() {
-        present(ModalViewController(), animated: true, completion: nil)
+        present(SimpleMessageViewController(withText: "HERE\nIS\nTHE\nMODAL!"), animated: true, completion: nil)
     }
 }
 

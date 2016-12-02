@@ -8,15 +8,24 @@
 
 import UIKit
 
-final class ModalViewController: UIViewController {
+class ModalViewController: UIViewController {
 
     // MARK - var overrides
     override var modalPresentationStyle: UIModalPresentationStyle {
         get {
-            return .overCurrentContext
+            return .overFullScreen
         }
         set {
-            print("ignoring setting the modal presentation style, it would kill the blur if its not .overCurrentContext")
+            print("ModalViewController: ignoring setting the modal presentation style, it would kill the blur if its not .overCurrentContext")
+        }
+    }
+
+    override var modalPresentationCapturesStatusBarAppearance: Bool {
+        get {
+            return true
+        }
+        set {
+            print("ModalViewController: ignoring setting the modalPresentationCapturesStatusBarAppearance style, it would not allow this controller to control the status bar")
         }
     }
 
@@ -25,8 +34,9 @@ final class ModalViewController: UIViewController {
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
+        return .lightContent
     }
+    
 }
 
 // MARK: - View lifecycle
@@ -34,11 +44,12 @@ extension ModalViewController {
 
     override func loadView() {
         view = ModalView()
+
+ //       modalPresentationCapturesStatusBarAppearance = true
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         (view as? ModalView)?.delegate = self
     }
 }

@@ -11,10 +11,10 @@
 		8A246E401DF09DFA00A06522 /* UIFont+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A246E3F1DF09DFA00A06522 /* UIFont+App.swift */; };
 		8A247B2E1DEF1D5B003A3FF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A247B2D1DEF1D5B003A3FF2 /* AppDelegate.swift */; };
 		8A247B351DEF1D5B003A3FF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A247B341DEF1D5B003A3FF2 /* Assets.xcassets */; };
-		8A247B381DEF1D5B003A3FF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A247B361DEF1D5B003A3FF2 /* LaunchScreen.storyboard */; };
 		8A247B401DEF1D79003A3FF2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A247B3F1DEF1D79003A3FF2 /* MainViewController.swift */; };
 		8A247B421DEF1DCD003A3FF2 /* Anchorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A247B411DEF1DCD003A3FF2 /* Anchorage.swift */; };
 		8A8C776E1DEF7AC500A7625E /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C776D1DEF7AC500A7625E /* UIColor+App.swift */; };
+		8AAD331F1DF1F40B006D58BB /* SimpleMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD331E1DF1F40B006D58BB /* SimpleMessageViewController.swift */; };
 		8AD657D21DF0D0CB007793DA /* DismisslButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD657D11DF0D0CB007793DA /* DismisslButton.swift */; };
 		8AD657D41DF0D874007793DA /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD657D31DF0D874007793DA /* ModalView.swift */; };
 		8AD657D61DF0DB5A007793DA /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD657D51DF0DB5A007793DA /* ModalViewController.swift */; };
@@ -26,11 +26,11 @@
 		8A247B2A1DEF1D5B003A3FF2 /* IBFiP01ShowingAModal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBFiP01ShowingAModal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A247B2D1DEF1D5B003A3FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A247B341DEF1D5B003A3FF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8A247B371DEF1D5B003A3FF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A247B391DEF1D5B003A3FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A247B3F1DEF1D79003A3FF2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8A247B411DEF1DCD003A3FF2 /* Anchorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchorage.swift; sourceTree = "<group>"; };
 		8A8C776D1DEF7AC500A7625E /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
+		8AAD331E1DF1F40B006D58BB /* SimpleMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleMessageViewController.swift; sourceTree = "<group>"; };
 		8AD657D11DF0D0CB007793DA /* DismisslButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismisslButton.swift; sourceTree = "<group>"; };
 		8AD657D31DF0D874007793DA /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		8AD657D51DF0DB5A007793DA /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
@@ -71,11 +71,11 @@
 				8A247B2D1DEF1D5B003A3FF2 /* AppDelegate.swift */,
 				8AD657D11DF0D0CB007793DA /* DismisslButton.swift */,
 				8A247B3F1DEF1D79003A3FF2 /* MainViewController.swift */,
+				8AAD331E1DF1F40B006D58BB /* SimpleMessageViewController.swift */,
 				8AD657D31DF0D874007793DA /* ModalView.swift */,
 				8AD657D51DF0DB5A007793DA /* ModalViewController.swift */,
 				8A246E3D1DF07DBF00A06522 /* PillButton.swift */,
 				8A247B341DEF1D5B003A3FF2 /* Assets.xcassets */,
-				8A247B361DEF1D5B003A3FF2 /* LaunchScreen.storyboard */,
 				8A247B391DEF1D5B003A3FF2 /* Info.plist */,
 			);
 			path = IBFiP01ShowingAModal;
@@ -149,7 +149,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A247B381DEF1D5B003A3FF2 /* LaunchScreen.storyboard in Resources */,
 				8A247B351DEF1D5B003A3FF2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +165,7 @@
 				8AD657D41DF0D874007793DA /* ModalView.swift in Sources */,
 				8A247B2E1DEF1D5B003A3FF2 /* AppDelegate.swift in Sources */,
 				8A8C776E1DEF7AC500A7625E /* UIColor+App.swift in Sources */,
+				8AAD331F1DF1F40B006D58BB /* SimpleMessageViewController.swift in Sources */,
 				8A247B421DEF1DCD003A3FF2 /* Anchorage.swift in Sources */,
 				8A246E401DF09DFA00A06522 /* UIFont+App.swift in Sources */,
 				8AD657D61DF0DB5A007793DA /* ModalViewController.swift in Sources */,
@@ -174,17 +174,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8A247B361DEF1D5B003A3FF2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A247B371DEF1D5B003A3FF2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8A247B3A1DEF1D5B003A3FF2 /* Debug */ = {
