@@ -5,8 +5,7 @@
 //  Created by John Stricker on 11/30/16.
 //  Copyright © 2016 Raizlabs. All rights reserved.
 //
-
-import Anchorage
+import Anchorage 
 import UIKit
 
 /// This will show the Raizlabs Logo and have a button to present a modal

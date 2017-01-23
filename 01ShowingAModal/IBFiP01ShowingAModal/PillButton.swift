@@ -5,7 +5,6 @@
 //  Created by John Stricker on 12/1/16.
 //  Copyright © 2016 Raizlabs. All rights reserved.
 //
-
 import Anchorage
 import UIKit
 
@@ -46,12 +45,11 @@ extension PillButton {
 
 // MARK: - Button Configuration
 private extension PillButton {
+    
     enum Appearance {
-        static let backgroundColor = UIColor.App.raizlabsRed
-        static let borderColor = UIColor.lightGray.cgColor
-        static let borderWidth = CGFloat(2)
+        static let backgroundColor = AppColor.raizlabsRed
         static let disabledFontColor = UIColor.lightGray
-        static let font = UIFont.App(type: .helvetica, ofSize: 20)
+        static let font = AppFont.helvetica.size(20)
         static let fontColor = UIColor.white
         static let highlightedBackgroundColor = UIColor.red
         static let size = CGSize(width: 240, height: 60)
@@ -60,8 +58,6 @@ private extension PillButton {
     func configureButton(withTitle title: String) {
         setTitle(title, for: .normal)
         
-        layer.borderWidth = Appearance.borderWidth
-        layer.borderColor = Appearance.borderColor
         layer.cornerRadius = Appearance.size.height / 2.0
         clipsToBounds = true
 

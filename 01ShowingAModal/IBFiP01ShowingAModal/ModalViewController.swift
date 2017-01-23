@@ -6,7 +6,6 @@
 //  Copyright © 2016 Raizlabs. All rights reserved.
 //
 
-import Anchorage
 import UIKit
 
 /// A modal with dark blurred background and light UIStatusBar

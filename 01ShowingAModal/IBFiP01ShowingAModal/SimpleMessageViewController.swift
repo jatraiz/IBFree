@@ -12,7 +12,7 @@ import UIKit
 final class SimpleMessageViewController: ModalViewController {
     fileprivate let messageLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.App(type: .helvetica, ofSize: 50)
+        label.font =  AppFont.helvetica.size(50)
         label.textColor = UIColor.white
         label.textAlignment = .center
         label.numberOfLines = 0

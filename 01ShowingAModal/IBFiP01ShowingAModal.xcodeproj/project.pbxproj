@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		25C850FB447A252FB7711630 /* Pods_IBFiP01ShowingAModal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAA66664AC230C5963492A6 /* Pods_IBFiP01ShowingAModal.framework */; };
 		8A246E3E1DF07DBF00A06522 /* PillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A246E3D1DF07DBF00A06522 /* PillButton.swift */; };
-		8A246E401DF09DFA00A06522 /* UIFont+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A246E3F1DF09DFA00A06522 /* UIFont+App.swift */; };
+		8A246E401DF09DFA00A06522 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A246E3F1DF09DFA00A06522 /* AppFont.swift */; };
 		8A247B2E1DEF1D5B003A3FF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A247B2D1DEF1D5B003A3FF2 /* AppDelegate.swift */; };
 		8A247B351DEF1D5B003A3FF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A247B341DEF1D5B003A3FF2 /* Assets.xcassets */; };
 		8A247B401DEF1D79003A3FF2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A247B3F1DEF1D79003A3FF2 /* MainViewController.swift */; };
-		8A8C776E1DEF7AC500A7625E /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C776D1DEF7AC500A7625E /* UIColor+App.swift */; };
+		8A8C776E1DEF7AC500A7625E /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C776D1DEF7AC500A7625E /* AppColor.swift */; };
 		8AAD331F1DF1F40B006D58BB /* SimpleMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD331E1DF1F40B006D58BB /* SimpleMessageViewController.swift */; };
 		8AD657D21DF0D0CB007793DA /* DismisslButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD657D11DF0D0CB007793DA /* DismisslButton.swift */; };
 		8AD657D41DF0D874007793DA /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD657D31DF0D874007793DA /* ModalView.swift */; };
@@ -24,13 +24,13 @@
 		426570B72415495F160EA1D0 /* Pods-IBFiP01ShowingAModal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBFiP01ShowingAModal.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBFiP01ShowingAModal/Pods-IBFiP01ShowingAModal.release.xcconfig"; sourceTree = "<group>"; };
 		7EAA66664AC230C5963492A6 /* Pods_IBFiP01ShowingAModal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBFiP01ShowingAModal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A246E3D1DF07DBF00A06522 /* PillButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillButton.swift; sourceTree = "<group>"; };
-		8A246E3F1DF09DFA00A06522 /* UIFont+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+App.swift"; sourceTree = "<group>"; };
+		8A246E3F1DF09DFA00A06522 /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 		8A247B2A1DEF1D5B003A3FF2 /* IBFiP01ShowingAModal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBFiP01ShowingAModal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A247B2D1DEF1D5B003A3FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A247B341DEF1D5B003A3FF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A247B391DEF1D5B003A3FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A247B3F1DEF1D79003A3FF2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		8A8C776D1DEF7AC500A7625E /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
+		8A8C776D1DEF7AC500A7625E /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		8AAD331E1DF1F40B006D58BB /* SimpleMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleMessageViewController.swift; sourceTree = "<group>"; };
 		8AD657D11DF0D0CB007793DA /* DismisslButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismisslButton.swift; sourceTree = "<group>"; };
 		8AD657D31DF0D874007793DA /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
@@ -84,10 +84,10 @@
 				8A247B2D1DEF1D5B003A3FF2 /* AppDelegate.swift */,
 				8AD657D11DF0D0CB007793DA /* DismisslButton.swift */,
 				8A247B3F1DEF1D79003A3FF2 /* MainViewController.swift */,
-				8AAD331E1DF1F40B006D58BB /* SimpleMessageViewController.swift */,
 				8AD657D31DF0D874007793DA /* ModalView.swift */,
 				8AD657D51DF0DB5A007793DA /* ModalViewController.swift */,
 				8A246E3D1DF07DBF00A06522 /* PillButton.swift */,
+				8AAD331E1DF1F40B006D58BB /* SimpleMessageViewController.swift */,
 				8A247B341DEF1D5B003A3FF2 /* Assets.xcassets */,
 				8A247B391DEF1D5B003A3FF2 /* Info.plist */,
 			);
@@ -97,8 +97,8 @@
 		8A8C776B1DEF7A9D00A7625E /* Extensions  */ = {
 			isa = PBXGroup;
 			children = (
-				8A8C776D1DEF7AC500A7625E /* UIColor+App.swift */,
-				8A246E3F1DF09DFA00A06522 /* UIFont+App.swift */,
+				8A8C776D1DEF7AC500A7625E /* AppColor.swift */,
+				8A246E3F1DF09DFA00A06522 /* AppFont.swift */,
 			);
 			name = "Extensions ";
 			sourceTree = "<group>";
@@ -141,7 +141,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Raizlabs;
 				TargetAttributes = {
 					8A247B291DEF1D5B003A3FF2 = {
@@ -236,9 +236,9 @@
 				8AD657D21DF0D0CB007793DA /* DismisslButton.swift in Sources */,
 				8AD657D41DF0D874007793DA /* ModalView.swift in Sources */,
 				8A247B2E1DEF1D5B003A3FF2 /* AppDelegate.swift in Sources */,
-				8A8C776E1DEF7AC500A7625E /* UIColor+App.swift in Sources */,
+				8A8C776E1DEF7AC500A7625E /* AppColor.swift in Sources */,
 				8AAD331F1DF1F40B006D58BB /* SimpleMessageViewController.swift in Sources */,
-				8A246E401DF09DFA00A06522 /* UIFont+App.swift in Sources */,
+				8A246E401DF09DFA00A06522 /* AppFont.swift in Sources */,
 				8AD657D61DF0DB5A007793DA /* ModalViewController.swift in Sources */,
 				8A247B401DEF1D79003A3FF2 /* MainViewController.swift in Sources */,
 			);
@@ -265,6 +265,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -314,6 +315,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -342,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DCBF6FFF7E22F9AF9D4A81DF /* Pods-IBFiP01ShowingAModal.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IBFiP01ShowingAModal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -355,6 +358,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 426570B72415495F160EA1D0 /* Pods-IBFiP01ShowingAModal.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IBFiP01ShowingAModal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
