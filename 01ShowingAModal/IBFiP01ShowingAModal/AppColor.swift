@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// All colors used in the app should be specified here
 enum AppColor {
 
     static let lightGray = UIColor.lightGray

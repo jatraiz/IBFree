@@ -10,10 +10,11 @@ import Anchorage
 import UIKit
 
 final class SimpleMessageViewController: ModalViewController {
+
     fileprivate let messageLabel: UILabel = {
         let label = UILabel()
         label.font =  AppFont.helvetica.size(50)
-        label.textColor = UIColor.white
+        label.textColor = AppColor.white
         label.textAlignment = .center
         label.numberOfLines = 0
         return label

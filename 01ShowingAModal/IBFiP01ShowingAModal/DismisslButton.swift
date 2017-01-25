@@ -11,6 +11,7 @@ import UIKit
 
 /// A simple small X button used for dismissing modals
 final class DismissButton: UIButton {
+
     static let size = CGSize(width: 16, height: 16)
 
     init() {
@@ -19,7 +20,7 @@ final class DismissButton: UIButton {
         backgroundColor = UIColor.clear
         tintColor = UIColor.white
 
-        let image = #imageLiteral(resourceName: "icn-close")
+        let image = UIImage(named: "icn-close")
         setImage(image, for: .normal)
 
         // Layout

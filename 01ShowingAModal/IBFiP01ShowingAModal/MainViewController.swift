@@ -10,21 +10,12 @@ import UIKit
 
 /// This will show the Raizlabs Logo and have a button to present a modal
 final class MainViewController: UIViewController {
+    
     /// A container used to center contents, all contents of the view controller should be added as a subview to this view
     fileprivate let containerView = UIView()
 
     /// An image view containing the Raizlabs Logo
-    fileprivate let logoImageView: UIImageView = {
-        let logoSize = CGSize(width: 150, height: 150)
-        let imageView = UIImageView()
-
-        imageView.image = #imageLiteral(resourceName: "raizlabs-logo")
-
-        imageView.heightAnchor == logoSize.height
-        imageView.widthAnchor == logoSize.width
-
-        return imageView
-    }()
+    fileprivate let logoImageView = RZLogoImageView()
 
     /// Button to show modal
     fileprivate let showModalButton = PillButton(title: "Show Me The Modal")
