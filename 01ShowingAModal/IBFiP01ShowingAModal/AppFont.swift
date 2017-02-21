@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// All fonts in the app should be specified here
+/// All fonts in the app should be specified here. Fonts are accessed by specifying the font family and a size. For example: let font = AppFont.helvetica.size(16)
 enum AppFont: String {
     
     case helvetica

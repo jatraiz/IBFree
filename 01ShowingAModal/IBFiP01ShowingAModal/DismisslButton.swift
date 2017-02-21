@@ -12,8 +12,6 @@ import UIKit
 /// A simple small X button used for dismissing modals
 final class DismissButton: UIButton {
 
-    static let size = CGSize(width: 16, height: 16)
-
     init() {
         super.init(frame: CGRect.zero)
 
@@ -24,15 +22,16 @@ final class DismissButton: UIButton {
         setImage(image, for: .normal)
 
         // Layout
-        widthAnchor == DismissButton.size.width
-        heightAnchor == DismissButton.size.height
+        
+        widthAnchor == 16
+        heightAnchor == 16
     }
 
     @available(*, unavailable) required init?(coder aDecoder: NSCoder) {
-        fatalError("this is a xibless class utilizing anchorage for autolayout, use init(title:) instead")
+        fatalError("this is a xibless class utilizing anchorage for autolayout, use init() instead")
     }
 
     @available(*, unavailable) convenience init(type buttonType: UIButtonType) {
-        fatalError("this is a xibless class utilizing anchorage for autolayout, use init(title:) instead")
+        fatalError("this is a xibless class utilizing anchorage for autolayout, use init() instead")
     }
 }

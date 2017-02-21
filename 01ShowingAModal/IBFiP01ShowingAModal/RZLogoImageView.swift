@@ -11,15 +11,13 @@ import UIKit
 
 final class RZLogoImageView: UIImageView {
 
-    static let size = CGSize(width: 150, height: 150)
-
     init() {
         super.init(frame: CGRect.zero)
 
         image = UIImage(named: "raizlabs-logo")
 
-        heightAnchor == RZLogoImageView.size.height
-        widthAnchor == RZLogoImageView.size.width
+        heightAnchor == 150
+        widthAnchor == 150
     }
 
     @available(*, unavailable) required init?(coder aDecoder: NSCoder) {
