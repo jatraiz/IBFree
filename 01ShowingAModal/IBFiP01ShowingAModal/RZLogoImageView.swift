@@ -14,7 +14,6 @@ final class RZLogoImageView: UIImageView {
     static let size = CGSize(width: 150, height: 150)
 
     init() {
-        
         super.init(frame: CGRect.zero)
 
         image = UIImage(named: "raizlabs-logo")

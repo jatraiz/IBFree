@@ -9,6 +9,7 @@
 import Anchorage
 import UIKit
 
+/// Displays a large centered text message.
 final class SimpleMessageViewController: ModalViewController {
 
     fileprivate let messageLabel: UILabel = {
@@ -28,6 +29,7 @@ final class SimpleMessageViewController: ModalViewController {
 
 // MARK: - View Lifecycle
 extension SimpleMessageViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
@@ -36,6 +38,7 @@ extension SimpleMessageViewController {
 
 // MARK: - View Configuration
 private extension SimpleMessageViewController {
+    
     func configureView() {
         view.addSubview(messageLabel)
         messageLabel.centerAnchors == view.centerAnchors

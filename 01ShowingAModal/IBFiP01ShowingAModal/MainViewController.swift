@@ -11,10 +11,10 @@ import UIKit
 /// This will show the Raizlabs Logo and have a button to present a modal
 final class MainViewController: UIViewController {
     
-    /// A container used to center contents, all contents of the view controller should be added as a subview to this view
+    /// Container used to center contents, all contents of the view controller should be added as a subview to this view
     fileprivate let containerView = UIView()
 
-    /// An image view containing the Raizlabs Logo
+    /// Image view containing the Raizlabs Logo
     fileprivate let logoImageView = RZLogoImageView()
 
     /// Button to show modal
@@ -23,6 +23,7 @@ final class MainViewController: UIViewController {
 
 // MARK: - View lifecycle
 extension MainViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureActions()

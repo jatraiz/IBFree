@@ -30,6 +30,7 @@ final class PillButton: UIButton {
 
 // MARK: - UIButton Overrides
 extension PillButton {
+
     override var isEnabled: Bool {
         didSet {
             alpha = isEnabled ? 1.0 : 0.4
@@ -55,8 +56,7 @@ private extension PillButton {
         static let size = CGSize(width: 240, height: 60)
     }
 
-    func configureButton(withTitle title: String) {
-        
+    func configureButton(withTitle title: String) {        
         setTitle(title, for: .normal)
         
         layer.cornerRadius = Appearance.size.height / 2.0

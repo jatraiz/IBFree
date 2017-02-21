@@ -82,28 +82,52 @@
 		8A247B2C1DEF1D5B003A3FF2 /* IBFiP01ShowingAModal */ = {
 			isa = PBXGroup;
 			children = (
-				8A8C776B1DEF7A9D00A7625E /* Extensions  */,
+				8A8C776B1DEF7A9D00A7625E /* App Style */,
+				8A7719B51E5C9F5100243CC8 /* Modals */,
+				8A7719B41E5C9F4700243CC8 /* Reusable UI */,
+				8A7719B61E5C9FCB00243CC8 /* View Controllers */,
 				8A247B2D1DEF1D5B003A3FF2 /* AppDelegate.swift */,
-				8AD657D11DF0D0CB007793DA /* DismisslButton.swift */,
-				8A247B3F1DEF1D79003A3FF2 /* MainViewController.swift */,
-				8AD657D31DF0D874007793DA /* ModalView.swift */,
-				8AD657D51DF0DB5A007793DA /* ModalViewController.swift */,
-				8A246E3D1DF07DBF00A06522 /* PillButton.swift */,
-				8A204C481E395FFF00FFB646 /* RZLogoImageView.swift */,
-				8AAD331E1DF1F40B006D58BB /* SimpleMessageViewController.swift */,
 				8A247B341DEF1D5B003A3FF2 /* Assets.xcassets */,
 				8A247B391DEF1D5B003A3FF2 /* Info.plist */,
 			);
 			path = IBFiP01ShowingAModal;
 			sourceTree = "<group>";
 		};
-		8A8C776B1DEF7A9D00A7625E /* Extensions  */ = {
+		8A7719B41E5C9F4700243CC8 /* Reusable UI */ = {
+			isa = PBXGroup;
+			children = (
+				8AD657D11DF0D0CB007793DA /* DismisslButton.swift */,
+				8A246E3D1DF07DBF00A06522 /* PillButton.swift */,
+				8A204C481E395FFF00FFB646 /* RZLogoImageView.swift */,
+			);
+			name = "Reusable UI";
+			sourceTree = "<group>";
+		};
+		8A7719B51E5C9F5100243CC8 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				8AD657D31DF0D874007793DA /* ModalView.swift */,
+				8AD657D51DF0DB5A007793DA /* ModalViewController.swift */,
+			);
+			name = Modals;
+			sourceTree = "<group>";
+		};
+		8A7719B61E5C9FCB00243CC8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8A247B3F1DEF1D79003A3FF2 /* MainViewController.swift */,
+				8AAD331E1DF1F40B006D58BB /* SimpleMessageViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8A8C776B1DEF7A9D00A7625E /* App Style */ = {
 			isa = PBXGroup;
 			children = (
 				8A8C776D1DEF7AC500A7625E /* AppColor.swift */,
 				8A246E3F1DF09DFA00A06522 /* AppFont.swift */,
 			);
-			name = "Extensions ";
+			name = "App Style";
 			sourceTree = "<group>";
 		};
 		CF2F893AE433F6DC8CACB0A8 /* Frameworks */ = {
