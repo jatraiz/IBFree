@@ -19,10 +19,8 @@ final class MainViewController: UIViewController {
 
     /// Button to show modal
     fileprivate let showModalButton = PillButton(title: "Show Me The Modal")
-}
 
-// MARK: - View lifecycle
-extension MainViewController {
+    // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +45,7 @@ private extension MainViewController {
 
     @objc func showModalButtonTapped() {
         let text = "HERE\nIS\nTHE\nMODAL!"
-        let modal = SimpleMessageViewController(withText: text)
+        let modal = SimpleMessageModalViewController(withText: text)
         present(modal, animated: true, completion: nil)
     }
 }

@@ -15,7 +15,7 @@
 		8A247B351DEF1D5B003A3FF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A247B341DEF1D5B003A3FF2 /* Assets.xcassets */; };
 		8A247B401DEF1D79003A3FF2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A247B3F1DEF1D79003A3FF2 /* MainViewController.swift */; };
 		8A8C776E1DEF7AC500A7625E /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C776D1DEF7AC500A7625E /* AppColor.swift */; };
-		8AAD331F1DF1F40B006D58BB /* SimpleMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD331E1DF1F40B006D58BB /* SimpleMessageViewController.swift */; };
+		8AAD331F1DF1F40B006D58BB /* SimpleMessageModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD331E1DF1F40B006D58BB /* SimpleMessageModalViewController.swift */; };
 		8AD657D21DF0D0CB007793DA /* DismisslButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD657D11DF0D0CB007793DA /* DismisslButton.swift */; };
 		8AD657D41DF0D874007793DA /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD657D31DF0D874007793DA /* ModalView.swift */; };
 		8AD657D61DF0DB5A007793DA /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD657D51DF0DB5A007793DA /* ModalViewController.swift */; };
@@ -33,7 +33,7 @@
 		8A247B391DEF1D5B003A3FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A247B3F1DEF1D79003A3FF2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8A8C776D1DEF7AC500A7625E /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
-		8AAD331E1DF1F40B006D58BB /* SimpleMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleMessageViewController.swift; sourceTree = "<group>"; };
+		8AAD331E1DF1F40B006D58BB /* SimpleMessageModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleMessageModalViewController.swift; sourceTree = "<group>"; };
 		8AD657D11DF0D0CB007793DA /* DismisslButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismisslButton.swift; sourceTree = "<group>"; };
 		8AD657D31DF0D874007793DA /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		8AD657D51DF0DB5A007793DA /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +108,7 @@
 			children = (
 				8AD657D31DF0D874007793DA /* ModalView.swift */,
 				8AD657D51DF0DB5A007793DA /* ModalViewController.swift */,
+				8AAD331E1DF1F40B006D58BB /* SimpleMessageModalViewController.swift */,
 			);
 			name = Modals;
 			sourceTree = "<group>";
@@ -116,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				8A247B3F1DEF1D79003A3FF2 /* MainViewController.swift */,
-				8AAD331E1DF1F40B006D58BB /* SimpleMessageViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -264,7 +264,7 @@
 				8AD657D41DF0D874007793DA /* ModalView.swift in Sources */,
 				8A247B2E1DEF1D5B003A3FF2 /* AppDelegate.swift in Sources */,
 				8A8C776E1DEF7AC500A7625E /* AppColor.swift in Sources */,
-				8AAD331F1DF1F40B006D58BB /* SimpleMessageViewController.swift in Sources */,
+				8AAD331F1DF1F40B006D58BB /* SimpleMessageModalViewController.swift in Sources */,
 				8A246E401DF09DFA00A06522 /* AppFont.swift in Sources */,
 				8A204C491E395FFF00FFB646 /* RZLogoImageView.swift in Sources */,
 				8AD657D61DF0DB5A007793DA /* ModalViewController.swift in Sources */,

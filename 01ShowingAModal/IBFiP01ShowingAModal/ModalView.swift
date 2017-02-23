@@ -62,20 +62,20 @@ private extension ModalView {
 
     func configureView() {
 
-        // View Heirarchy
+        // View Hierarchy
         addSubview(blurView)
         addSubview(dismissButton)
 
         // Style
         isOpaque = false
-        backgroundColor = UIColor.clear
+        backgroundColor = AppColor.clear
 
         // Layout
 
         // blurView shares all edges w/its parent
         blurView.edgeAnchors == edgeAnchors
 
-        // dismiss button is placed at the top right
+        // dismissButton is placed at the top right
         dismissButton.topAnchor == topAnchor + Constants.dismissButtonMarginTop
         dismissButton.rightAnchor == rightAnchor - Constants.dismissButtonMarginRight
     }

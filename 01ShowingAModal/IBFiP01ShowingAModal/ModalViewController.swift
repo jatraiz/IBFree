@@ -18,10 +18,11 @@ class ModalViewController: UIViewController {
             return .overFullScreen
         }
         set {
-            print("ModalViewController: ignoring setting the modal presentation style, it would kill the blur if its not .overCurrentContext")
+            print("ModalViewController: ignoring setting the modal presentation style: this controller is designed to be presented full screen and so should always be .overFullScreen (plus, it would kill the blur if its not .overFullScreen or .overCurrentContext)")
         }
     }
 
+    /// Apple docs state that this value should be ignored when a view controller is presented full screen, but this doesn't appear to be the case, we still need to override it to controller the status bar appearance (https://developer.apple.com/reference/uikit/uiviewcontroller/1621453-modalpresentationcapturesstatusb)
     override var modalPresentationCapturesStatusBarAppearance: Bool {
         get {
             return true
@@ -38,10 +39,8 @@ class ModalViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-}
 
-// MARK: - View lifecycle
-extension ModalViewController {
+    // MARK: - View lifecycle
 
     override func loadView() {
         view = ModalView()

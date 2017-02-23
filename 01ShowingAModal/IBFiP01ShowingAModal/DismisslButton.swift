@@ -15,8 +15,8 @@ final class DismissButton: UIButton {
     init() {
         super.init(frame: CGRect.zero)
 
-        backgroundColor = UIColor.clear
-        tintColor = UIColor.white
+        backgroundColor = AppColor.clear
+        tintColor = AppColor.white
 
         let image = UIImage(named: "icn-close")
         setImage(image, for: .normal)
@@ -28,6 +28,10 @@ final class DismissButton: UIButton {
     }
 
     @available(*, unavailable) required init?(coder aDecoder: NSCoder) {
+        fatalError("this is a xibless class utilizing anchorage for autolayout, use init() instead")
+    }
+
+    @available(*, unavailable) override init(frame: CGRect) {
         fatalError("this is a xibless class utilizing anchorage for autolayout, use init() instead")
     }
 

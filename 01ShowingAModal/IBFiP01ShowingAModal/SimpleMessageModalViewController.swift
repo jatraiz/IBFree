@@ -1,5 +1,5 @@
 //
-//  SimpleMessageModal.swift
+//  SimpleMessageModalViewController.swift
 //  IBFiP01ShowingAModal
 //
 //  Created by John Stricker on 12/2/16.
@@ -10,7 +10,7 @@ import Anchorage
 import UIKit
 
 /// Displays a large centered text message.
-final class SimpleMessageViewController: ModalViewController {
+final class SimpleMessageModalViewController: ModalViewController {
 
     fileprivate let messageLabel: UILabel = {
         let label = UILabel()
@@ -25,10 +25,8 @@ final class SimpleMessageViewController: ModalViewController {
         self.init()
         messageLabel.text = text
     }
-}
 
-// MARK: - View Lifecycle
-extension SimpleMessageViewController {
+    // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +35,7 @@ extension SimpleMessageViewController {
 }
 
 // MARK: - View Configuration
-private extension SimpleMessageViewController {
+private extension SimpleMessageModalViewController {
     
     func configureView() {
         view.addSubview(messageLabel)

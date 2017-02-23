@@ -10,9 +10,10 @@ import UIKit
 
 /// All colors used in the app should be specified here
 enum AppColor {
-
+    static let clear = UIColor.clear
     static let lightGray = UIColor.lightGray
     static let raizlabsRed = AppColor.color(fromHex: 0xec594d)
+    static let red = UIColor.red
     static let white = UIColor.white
 
     /// Generate UIColor from Hex. Adapted from http://stackoverflow.com/a/3532264/4092717
