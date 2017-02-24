@@ -8,7 +8,7 @@
 import Anchorage
 import UIKit
 
-/// An oval button with a semiTransparent border and raizlabs red background
+/// An oval button with a raizlabs red background
 final class PillButton: UIButton {
 
     init(title: String) {

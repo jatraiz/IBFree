@@ -32,11 +32,11 @@ final class ModalView: UIView {
     }
 
     @available(*, unavailable) required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("this is a xibless class utilizing anchorage for autolayout, use init() instead")
     }
 
     @available(*, unavailable) override init(frame: CGRect) {
-        fatalError("init(frame:) has not been implemented")
+        fatalError("this is a xibless class utilizing anchorage for autolayout, use init() instead")
     }
 }
 
