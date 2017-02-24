@@ -27,14 +27,6 @@ final class MainViewController: UIViewController {
         configureActions()
         configureView()
     }
-
-    override var prefersStatusBarHidden: Bool {
-        return false
-    }
-
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
-    }
 }
 
 // MARK: - Actions
