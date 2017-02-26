@@ -47,10 +47,6 @@ extension ModalViewController {
         }
     }
 
-    override var prefersStatusBarHidden: Bool {
-        return false
-    }
-
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -97,6 +93,5 @@ private extension ModalViewController {
         dismissButton.topAnchor == view.topAnchor + Constants.dismissButtonMarginTop
         dismissButton.rightAnchor == view.rightAnchor - Constants.dismissButtonMarginRight
     }
-
 }
 
