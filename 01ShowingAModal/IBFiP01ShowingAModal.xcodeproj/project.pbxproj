@@ -17,7 +17,6 @@
 		8A8C776E1DEF7AC500A7625E /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C776D1DEF7AC500A7625E /* AppColor.swift */; };
 		8AAD331F1DF1F40B006D58BB /* SimpleMessageModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD331E1DF1F40B006D58BB /* SimpleMessageModalViewController.swift */; };
 		8AD657D21DF0D0CB007793DA /* DismisslButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD657D11DF0D0CB007793DA /* DismisslButton.swift */; };
-		8AD657D41DF0D874007793DA /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD657D31DF0D874007793DA /* ModalView.swift */; };
 		8AD657D61DF0DB5A007793DA /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD657D51DF0DB5A007793DA /* ModalViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,6 @@
 		8A8C776D1DEF7AC500A7625E /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		8AAD331E1DF1F40B006D58BB /* SimpleMessageModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleMessageModalViewController.swift; sourceTree = "<group>"; };
 		8AD657D11DF0D0CB007793DA /* DismisslButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismisslButton.swift; sourceTree = "<group>"; };
-		8AD657D31DF0D874007793DA /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		8AD657D51DF0DB5A007793DA /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		DCBF6FFF7E22F9AF9D4A81DF /* Pods-IBFiP01ShowingAModal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBFiP01ShowingAModal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBFiP01ShowingAModal/Pods-IBFiP01ShowingAModal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +104,6 @@
 		8A7719B51E5C9F5100243CC8 /* Modals */ = {
 			isa = PBXGroup;
 			children = (
-				8AD657D31DF0D874007793DA /* ModalView.swift */,
 				8AD657D51DF0DB5A007793DA /* ModalViewController.swift */,
 				8AAD331E1DF1F40B006D58BB /* SimpleMessageModalViewController.swift */,
 			);
@@ -261,7 +258,6 @@
 			files = (
 				8A246E3E1DF07DBF00A06522 /* PillButton.swift in Sources */,
 				8AD657D21DF0D0CB007793DA /* DismisslButton.swift in Sources */,
-				8AD657D41DF0D874007793DA /* ModalView.swift in Sources */,
 				8A247B2E1DEF1D5B003A3FF2 /* AppDelegate.swift in Sources */,
 				8A8C776E1DEF7AC500A7625E /* AppColor.swift in Sources */,
 				8AAD331F1DF1F40B006D58BB /* SimpleMessageModalViewController.swift in Sources */,
