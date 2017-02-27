@@ -26,7 +26,7 @@ final class SimpleMessageModalViewController: ModalViewController {
         messageLabel.text = text
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    @available(*, unavailable) required init?(coder aDecoder: NSCoder) {
         fatalError("this is a xibless class utilizing anchorage for autolayout, use init(withText:) instead")
     }
 
