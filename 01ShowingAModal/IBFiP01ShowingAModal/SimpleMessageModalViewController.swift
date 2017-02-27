@@ -15,10 +15,10 @@ final class SimpleMessageModalViewController: ModalViewController {
     fileprivate let messageLabel: UILabel = {
         let label = UILabel()
         label.font =  AppFont.helvetica.size(50)
+        label.numberOfLines = 0
         label.textColor = AppColor.white
         label.textAlignment = .center
-        label.numberOfLines = 0
-        return label
+       return label
     }()
 
     init(withText text: String) {

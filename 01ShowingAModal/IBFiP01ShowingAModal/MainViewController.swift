@@ -61,10 +61,10 @@ private extension MainViewController {
         // Layout
 
         // The containerView's height is dynamically sized to fit its content (the topAnchor should match the top of the top most item, the bottomAnchor should match the bottom of the bottom most item)
-        containerView.horizontalAnchors == view.horizontalAnchors
-        containerView.topAnchor == logoImageView.topAnchor
         containerView.bottomAnchor == showModalButton.bottomAnchor
         containerView.centerAnchors == view.centerAnchors
+        containerView.horizontalAnchors == view.horizontalAnchors
+        containerView.topAnchor == logoImageView.topAnchor
 
         // The imageview is centered in containerView
         logoImageView.centerXAnchor == containerView.centerXAnchor
