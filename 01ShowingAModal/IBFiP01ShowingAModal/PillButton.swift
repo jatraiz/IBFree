@@ -16,17 +16,10 @@ final class PillButton: UIButton {
         configureButton(withTitle: title)
     }
 
-    @available(*, unavailable) init() {
-        fatalError("this is a xibless class utilizing anchorage for autolayout, use init(title:) instead")
-    }
-    
     @available(*, unavailable) required init?(coder aDecoder: NSCoder) {
         fatalError("this is a xibless class utilizing anchorage for autolayout, use init(title:) instead")
     }
 
-    @available(*, unavailable) convenience init(type buttonType: UIButtonType) {
-        fatalError("this is a xibless class utilizing anchorage for autolayout, use init(title:) instead")
-    }
 }
 
 // MARK: - UIButton Overrides

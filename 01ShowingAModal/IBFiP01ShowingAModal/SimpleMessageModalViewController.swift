@@ -21,9 +21,13 @@ final class SimpleMessageModalViewController: ModalViewController {
         return label
     }()
 
-    convenience init(withText text: String) {
-        self.init()
+    init(withText text: String) {
+        super.init(nibName: nil, bundle: nil)
         messageLabel.text = text
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("this is a xibless class utilizing anchorage for autolayout, use init(withText:) instead")
     }
 
     // MARK: - View Lifecycle
@@ -38,7 +42,14 @@ final class SimpleMessageModalViewController: ModalViewController {
 private extension SimpleMessageModalViewController {
     
     func configureView() {
+
+        // View Hierarchy
+
         view.addSubview(messageLabel)
+
+        // Layout
+
+        // messageLabel is centered in  the view
         messageLabel.centerAnchors == view.centerAnchors
     }
 }

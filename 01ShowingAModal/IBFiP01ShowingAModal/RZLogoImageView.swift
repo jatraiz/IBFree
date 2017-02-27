@@ -23,9 +23,5 @@ final class RZLogoImageView: UIImageView {
     @available(*, unavailable) required init?(coder aDecoder: NSCoder) {
         fatalError("this is a xibless class utilizing anchorage for autolayout, use init() instead")
     }
-
-    @available(*, unavailable) override init(frame: CGRect) {
-        fatalError("this is a xibless class utilizing anchorage for autolayout, use init() instead")
-    }
 }
 

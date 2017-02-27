@@ -31,11 +31,4 @@ final class DismissButton: UIButton {
         fatalError("this is a xibless class utilizing anchorage for autolayout, use init() instead")
     }
 
-    @available(*, unavailable) override init(frame: CGRect) {
-        fatalError("this is a xibless class utilizing anchorage for autolayout, use init() instead")
-    }
-
-    @available(*, unavailable) convenience init(type buttonType: UIButtonType) {
-        fatalError("this is a xibless class utilizing anchorage for autolayout, use init() instead")
-    }
 }
