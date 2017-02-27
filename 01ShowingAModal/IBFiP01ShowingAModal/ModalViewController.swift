@@ -9,7 +9,7 @@
 import Anchorage
 import UIKit
 
-/// A modal with dark blurred background and light UIStatusBar
+/// A modal with dark blurred background, dismiss button, and light UIStatusBar
 class ModalViewController: UIViewController {
 
     fileprivate let blurView: UIVisualEffectView = {
@@ -22,6 +22,19 @@ class ModalViewController: UIViewController {
     override func viewDidLoad() {
         configureActions()
         configureView()
+    }
+}
+
+// MARK: - Actions
+private extension ModalViewController {
+
+    func configureActions() {
+        dismissButton.addTarget(self, action: #selector(dismissButtonTapped), for: .touchUpInside)
+    }
+
+    @objc func dismissButtonTapped() {
+        presentingViewController?.dismiss(animated: true, completion: nil)
+
     }
 }
 
@@ -50,20 +63,6 @@ extension ModalViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-
-}
-
-// MARK: - Actions
-private extension ModalViewController {
-
-    func configureActions() {
-        dismissButton.addTarget(self, action: #selector(dismissButtonTapped), for: .touchUpInside)
-    }
-
-    @objc func dismissButtonTapped() {
-        presentingViewController?.dismiss(animated: true, completion: nil)
-
-    }
 }
 
 // MARK: - View Configuration
@@ -90,8 +89,8 @@ private extension ModalViewController {
         blurView.edgeAnchors == view.edgeAnchors
 
         // dismissButton is placed at the top right
-        dismissButton.topAnchor == view.topAnchor + Constants.dismissButtonMarginTop
         dismissButton.rightAnchor == view.rightAnchor - Constants.dismissButtonMarginRight
+        dismissButton.topAnchor == view.topAnchor + Constants.dismissButtonMarginTop
     }
 }
 
