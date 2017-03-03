@@ -15,7 +15,7 @@ final class MainViewController: UIViewController {
     fileprivate let containerView = UIView()
 
     /// Image view containing the Raizlabs Logo
-    fileprivate let logoImageView = RZLogoImageView()
+    fileprivate let logoImageView = LogoImageView()
 
     /// Button to show modal
     fileprivate let showModalButton = PillButton(title: "Show Me The Modal")
@@ -44,7 +44,8 @@ private extension MainViewController {
 
 // MARK: - View Configuration
 private extension MainViewController {
-    enum Appearance {
+
+    enum Constants {
         static let logoToButtonSpace = CGFloat(30)
     }
 
@@ -71,6 +72,6 @@ private extension MainViewController {
 
         // The button is centered below the logo imageview
         showModalButton.centerXAnchor == logoImageView.centerXAnchor
-        showModalButton.topAnchor == logoImageView.bottomAnchor + Appearance.logoToButtonSpace
+        showModalButton.topAnchor == logoImageView.bottomAnchor + Constants.logoToButtonSpace
     }
 }

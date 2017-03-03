@@ -13,7 +13,7 @@ final class PillButton: UIButton {
 
     init(title: String) {
         super.init(frame: CGRect.zero)
-        configureButton(withTitle: title)
+        configure(withTitle: title)
     }
 
     @available(*, unavailable) required init?(coder aDecoder: NSCoder) {
@@ -46,25 +46,23 @@ private extension PillButton {
         static let disabledFontColor = AppColor.lightGray
         static let disabledAlpha = CGFloat(0.4)
         static let enabledAlpha = CGFloat(1.0)
-        static let font = AppFont.helvetica.size(20)
-        static let fontColor = AppColor.white
         static let highlightedBackgroundColor = AppColor.red
         static let size = CGSize(width: 240, height: 60)
+        static let titleColor = AppColor.white
+        static let titleFont = AppFont.helvetica(20)
     }
 
-    func configureButton(withTitle title: String) {        
+    func configure(withTitle title: String) {
         setTitle(title, for: .normal)
         
         layer.cornerRadius = Constants.size.height / 2.0
         clipsToBounds = true
 
-        setTitleColor(Constants.fontColor, for: .normal)
+        setTitleColor(Constants.titleColor, for: .normal)
         setTitleColor(Constants.disabledFontColor, for: .disabled)
 
         backgroundColor = Constants.backgroundColor
-        titleLabel?.font = Constants.font
-
-        isOpaque = false
+        titleLabel?.font = Constants.titleFont
 
         // Layout
         heightAnchor == Constants.size.height

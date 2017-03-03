@@ -20,6 +20,7 @@ class ModalViewController: UIViewController {
     fileprivate let dismissButton = DismissButton()
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         configureActions()
         configureView()
     }
@@ -41,9 +42,10 @@ private extension ModalViewController {
 // MARK: - UIViewContoller style overrides
 extension ModalViewController {
 
+    /// Modal presentation style is set to .overFullScreen to enable the blur effect
     override var modalPresentationStyle: UIModalPresentationStyle {
         get {
-            return .overFullScreen
+            return .overCurrentContext
         }
         set {
             print("ModalViewController: ignoring setting the modal presentation style: this controller is designed to be presented full screen and so should always be .overFullScreen (plus, it would kill the blur if its not .overFullScreen or .overCurrentContext)")
@@ -69,8 +71,8 @@ extension ModalViewController {
 private extension ModalViewController {
 
     enum Constants {
-        static let dismissButtonMarginRight = CGFloat(10)
         static let dismissButtonMarginTop = CGFloat(30)
+        static let dismissButtonMarginTrailing = CGFloat(10)
     }
 
     func configureView() {
@@ -80,7 +82,6 @@ private extension ModalViewController {
         view.addSubview(dismissButton)
 
         // Style
-        view.isOpaque = false
         view.backgroundColor = AppColor.clear
 
         // Layout
@@ -89,7 +90,7 @@ private extension ModalViewController {
         blurView.edgeAnchors == view.edgeAnchors
 
         // dismissButton is placed at the top right
-        dismissButton.rightAnchor == view.rightAnchor - Constants.dismissButtonMarginRight
+        dismissButton.trailingAnchor == view.trailingAnchor - Constants.dismissButtonMarginTrailing
         dismissButton.topAnchor == view.topAnchor + Constants.dismissButtonMarginTop
     }
 }

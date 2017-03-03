@@ -18,7 +18,7 @@ final class DismissButton: UIButton {
         backgroundColor = AppColor.clear
         tintColor = AppColor.white
 
-        let image = UIImage(named: "icn-close")
+        let image = #imageLiteral(resourceName: "icn-close")
         setImage(image, for: .normal)
 
         // Layout
@@ -30,5 +30,4 @@ final class DismissButton: UIButton {
     @available(*, unavailable) required init?(coder aDecoder: NSCoder) {
         fatalError("this is a xibless class utilizing anchorage for autolayout, use init() instead")
     }
-
 }

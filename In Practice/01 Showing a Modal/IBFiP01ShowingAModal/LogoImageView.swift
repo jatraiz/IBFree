@@ -1,5 +1,5 @@
 //
-//  RZLogoImageView.swift
+//  LogoImageView.swift
 //  IBFiP01ShowingAModal
 //
 //  Created by John Stricker on 1/25/17.
@@ -9,12 +9,12 @@
 import Anchorage
 import UIKit
 
-final class RZLogoImageView: UIImageView {
+final class LogoImageView: UIImageView {
 
     init() {
         super.init(frame: CGRect.zero)
 
-        image = UIImage(named: "raizlabs-logo")
+        image = #imageLiteral(resourceName: "raizlabs-logo")
 
         heightAnchor == 150
         widthAnchor == 150

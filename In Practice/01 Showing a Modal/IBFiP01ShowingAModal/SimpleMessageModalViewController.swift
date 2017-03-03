@@ -14,7 +14,7 @@ final class SimpleMessageModalViewController: ModalViewController {
 
     fileprivate let messageLabel: UILabel = {
         let label = UILabel()
-        label.font =  AppFont.helvetica.size(50)
+        label.font =  AppFont.helvetica(50)
         label.numberOfLines = 0
         label.textColor = AppColor.white
         label.textAlignment = .center
@@ -40,6 +40,10 @@ final class SimpleMessageModalViewController: ModalViewController {
 
 // MARK: - View Configuration
 private extension SimpleMessageModalViewController {
+
+    enum Constants {
+        static let messageInsetHorizontal = CGFloat(10)
+    }
     
     func configureView() {
 
@@ -49,7 +53,8 @@ private extension SimpleMessageModalViewController {
 
         // Layout
 
-        // messageLabel is centered in  the view
-        messageLabel.centerAnchors == view.centerAnchors
+        // messageLabel is centered vertically in the view with a horizontal inset
+        messageLabel.centerYAnchor == view.centerYAnchor
+        messageLabel.horizontalAnchors == view.horizontalAnchors + Constants.messageInsetHorizontal
     }
 }
