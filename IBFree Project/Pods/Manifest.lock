@@ -1,0 +1,12 @@
+PODS:
+  - Anchorage (1.0.0)
+
+DEPENDENCIES:
+  - Anchorage
+
+SPEC CHECKSUMS:
+  Anchorage: 4979a8fbef79f751afb37bc8bf2cdcf952285fc1
+
+PODFILE CHECKSUM: 9e8c28717a410ffba4f3a5530eaf12f83a74ff31
+
+COCOAPODS: 1.0.0

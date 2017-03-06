@@ -8,7 +8,7 @@
 import Anchorage
 import UIKit
 
-/// An oval button with a raizlabs red background
+/// An pill-shaped button with a raizlabs red background
 final class PillButton: UIButton {
 
     init(title: String) {
@@ -27,13 +27,13 @@ extension PillButton {
 
     override var isEnabled: Bool {
         didSet {
-            alpha = isEnabled ? Constants.enabledAlpha : Constants.disabledAlpha
+            alpha = isEnabled ? Constant.enabledAlpha : Constant.disabledAlpha
         }
     }
 
     override var isHighlighted: Bool {
         didSet {
-            backgroundColor = isHighlighted ? Constants.highlightedBackgroundColor : Constants.backgroundColor
+            backgroundColor = isHighlighted ? Constant.highlightedBackgroundColor : Constant.backgroundColor
         }
     }
 }
@@ -41,11 +41,11 @@ extension PillButton {
 // MARK: - Button Configuration
 private extension PillButton {
     
-    enum Constants {
+    enum Constant {
         static let backgroundColor = AppColor.raizlabsRed
-        static let disabledFontColor = AppColor.lightGray
         static let disabledAlpha = CGFloat(0.4)
-        static let enabledAlpha = CGFloat(1.0)
+        static let disabledFontColor = AppColor.lightGray
+        static let enabledAlpha = CGFloat(1)
         static let highlightedBackgroundColor = AppColor.red
         static let size = CGSize(width: 240, height: 60)
         static let titleColor = AppColor.white
@@ -55,17 +55,17 @@ private extension PillButton {
     func configure(withTitle title: String) {
         setTitle(title, for: .normal)
         
-        layer.cornerRadius = Constants.size.height / 2.0
+        layer.cornerRadius = Constant.size.height / 2.0
         clipsToBounds = true
 
-        setTitleColor(Constants.titleColor, for: .normal)
-        setTitleColor(Constants.disabledFontColor, for: .disabled)
+        setTitleColor(Constant.titleColor, for: .normal)
+        setTitleColor(Constant.disabledFontColor, for: .disabled)
 
-        backgroundColor = Constants.backgroundColor
-        titleLabel?.font = Constants.titleFont
+        backgroundColor = Constant.backgroundColor
+        titleLabel?.font = Constant.titleFont
 
         // Layout
-        heightAnchor == Constants.size.height
-        widthAnchor == Constants.size.width
+        heightAnchor == Constant.size.height
+        widthAnchor == Constant.size.width
     }
 }

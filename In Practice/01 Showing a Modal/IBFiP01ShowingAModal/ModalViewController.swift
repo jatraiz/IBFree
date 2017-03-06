@@ -45,20 +45,20 @@ extension ModalViewController {
     /// Modal presentation style is set to .overFullScreen to enable the blur effect
     override var modalPresentationStyle: UIModalPresentationStyle {
         get {
-            return .overCurrentContext
+            return .overFullScreen
         }
         set {
-            print("ModalViewController: ignoring setting the modal presentation style: this controller is designed to be presented full screen and so should always be .overFullScreen (plus, it would kill the blur if its not .overFullScreen or .overCurrentContext)")
+            print("\(self): ignoring setting the modal presentation style: this controller is designed to be presented full screen and so should always be .overFullScreen (plus, it would kill the blur if its not .overFullScreen or .overCurrentContext)")
         }
     }
 
-    /// Apple docs state that this value should be ignored when a view controller is presented full screen, but this doesn't appear to be the case, we still need to override it to control the status bar appearance (https://developer.apple.com/reference/uikit/uiviewcontroller/1621453-modalpresentationcapturesstatusb)
+    /// Apple docs state that this value should be ignored when a view controller is presented full screen, but this doesn't appear to be the case, we still need to override it to control the status bar appearance (https://developer.apple.com/reference/uikit/uiviewcontroller/1621453-modalpresentationcapturesstatusb) Open radar here: http://openradar.appspot.com/30870230
     override var modalPresentationCapturesStatusBarAppearance: Bool {
         get {
             return true
         }
         set {
-            print("ModalViewController: ignoring setting the modalPresentationCapturesStatusBarAppearance style, it would not allow this controller to control the status bar")
+            print("\(self): ignoring setting the modalPresentationCapturesStatusBarAppearance style, it would not allow this controller to control the status bar")
         }
     }
 
@@ -70,7 +70,7 @@ extension ModalViewController {
 // MARK: - View Configuration
 private extension ModalViewController {
 
-    enum Constants {
+    enum Constant {
         static let dismissButtonMarginTop = CGFloat(30)
         static let dismissButtonMarginTrailing = CGFloat(10)
     }
@@ -90,8 +90,8 @@ private extension ModalViewController {
         blurView.edgeAnchors == view.edgeAnchors
 
         // dismissButton is placed at the top right
-        dismissButton.trailingAnchor == view.trailingAnchor - Constants.dismissButtonMarginTrailing
-        dismissButton.topAnchor == view.topAnchor + Constants.dismissButtonMarginTop
+        dismissButton.trailingAnchor == view.trailingAnchor - Constant.dismissButtonMarginTrailing
+        dismissButton.topAnchor == view.topAnchor + Constant.dismissButtonMarginTop
     }
 }
 

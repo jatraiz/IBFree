@@ -1,0 +1,7 @@
+platform :ios, '9.0'
+
+use_frameworks!
+
+target 'XIBLessExample' do
+	pod 'Anchorage'
+end

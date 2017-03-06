@@ -16,7 +16,7 @@ enum AppColor {
     static let red = UIColor.red
     static let white = UIColor.white
 
-    /// Generate UIColor from Hex. Adapted from http://stackoverflow.com/a/3532264/4092717
+    /// Generate UIColor from Hex. Adapted from Tom (http://stackoverflow.com/users/426478/tom) and Marcus Adam's (http://stackoverflow.com/users/168493/marcus-adams) Stack Overflow answer http://stackoverflow.com/a/3532264/4092717
     ///
     /// - Parameters:
     ///   - hex: Int (change # to 0x)

@@ -41,7 +41,7 @@ final class SimpleMessageModalViewController: ModalViewController {
 // MARK: - View Configuration
 private extension SimpleMessageModalViewController {
 
-    enum Constants {
+    enum Constant {
         static let messageInsetHorizontal = CGFloat(10)
     }
     
@@ -55,6 +55,6 @@ private extension SimpleMessageModalViewController {
 
         // messageLabel is centered vertically in the view with a horizontal inset
         messageLabel.centerYAnchor == view.centerYAnchor
-        messageLabel.horizontalAnchors == view.horizontalAnchors + Constants.messageInsetHorizontal
+        messageLabel.horizontalAnchors == view.horizontalAnchors + Constant.messageInsetHorizontal
     }
 }
