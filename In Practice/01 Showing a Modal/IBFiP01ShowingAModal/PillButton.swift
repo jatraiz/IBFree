@@ -8,7 +8,7 @@
 import Anchorage
 import UIKit
 
-/// An pill-shaped button with a raizlabs red background
+/// A pill-shaped button with a raizlabs red background
 final class PillButton: UIButton {
 
     init(title: String) {
