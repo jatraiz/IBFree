@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_XIBLessExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_XIBLessExampleVersionString[];
+FOUNDATION_EXPORT double Pods_IBFreeVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_IBFreeVersionString[];
 

@@ -20,7 +20,8 @@ final class XibView: UIView {
         nibSetup()
     }
 
-    //  Nib setup from http://stackoverflow.com/a/36424842/4092717
+    // Nib setup from http://stackoverflow.com/a/36424842/4092717
+    // by Frederik A. Winkelsdorf http://stackoverflow.com/users/844907/frederik-a-winkelsdorf
     fileprivate func nibSetup() {
         backgroundColor = .clear
 

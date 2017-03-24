@@ -1,8 +1,10 @@
 //
 //  AppDelegate.swift
-//  XIBLessExample
+//  IBFree
 //
-//  Created by John Stricker on 6/20/16.
+//  Created by John Stricker on 3/24/17.
+//  Copyright © 2017 Raizlabs. All rights reserved.
+//
 
 import UIKit
 
@@ -10,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
@@ -19,6 +22,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
-
 }
 

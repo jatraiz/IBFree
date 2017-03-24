@@ -1,8 +1,10 @@
 //
 //  MainViewController.swift
-//  XIBLessExample
+//  IBFree
 //
-//  Created by John Stricker on 6/20/16.
+//  Created by John Stricker on 3/24/17.
+//  Copyright © 2017 Raizlabs. All rights reserved.
+//
 
 import Anchorage
 import UIKit
@@ -14,7 +16,7 @@ final class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         configureViews()
     }
 
@@ -51,4 +53,3 @@ private extension MainViewController {
         xibLessView.heightAnchor       == xibView.heightAnchor
     }
 }
-
