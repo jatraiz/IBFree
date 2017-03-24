@@ -10,21 +10,21 @@ import UIKit
 final class XiblessView: UIView {
 
     enum ViewStyle {
-        case SimpleButton
-        case CornerButtons
+        case simpleButton
+        case cornerButtons
     }
 
-    private let cornerButtons: [UIButton]?
+    fileprivate let cornerButtons: [UIButton]?
 
-    private let button: UIButton = UIButton(type: .System)
+    fileprivate let button: UIButton = UIButton(type: .system)
 
     init(style: ViewStyle) {
 
         // Create the corner buttons if the style calls for it
-        if style == .CornerButtons {
+        if style == .cornerButtons {
             var buttonArray = [UIButton]()
             for _ in 0..<Constants.numberOfCornerButtons  {
-                buttonArray.append(UIButton(type: .System))
+                buttonArray.append(UIButton(type: .system))
             }
             cornerButtons = buttonArray
         } else {
@@ -52,14 +52,14 @@ private extension XiblessView {
     struct Constants {
         static let numberOfCornerButtons = 4
         static let cornerButtonSize = CGSize(width: 60, height: 60)
-        static let cornerButtonBackgroundColor = UIColor.lightGrayColor()
+        static let cornerButtonBackgroundColor = UIColor.lightGray
     }
 
     enum ButtonPositions: Int {
-        case UpperLeft  = 0
-        case UpperRight = 1
-        case LowerLeft  = 2
-        case LowerRight = 3
+        case upperLeft  = 0
+        case upperRight = 1
+        case lowerLeft  = 2
+        case lowerRight = 3
     }
 
     func configureView() {
@@ -77,8 +77,8 @@ private extension XiblessView {
 
         // Style
 
-        backgroundColor = UIColor.greenColor()
-        button.setTitle("This is a centered button without a XIB", forState: .Normal)
+        backgroundColor = UIColor.green
+        button.setTitle("This is a centered button without a XIB", for: UIControlState())
 
         // Layout
 
@@ -87,9 +87,9 @@ private extension XiblessView {
         button.centerYAnchor == centerYAnchor
     }
 
-    func configureCornerButtons(buttons: [UIButton]) {
+    func configureCornerButtons(_ buttons: [UIButton]) {
 
-        for (index, button) in buttons.enumerate() {
+        for (index, button) in buttons.enumerated() {
 
             // First make sure that the button's index has a position defined for it
             guard let position = ButtonPositions(rawValue: index) else {
@@ -104,7 +104,7 @@ private extension XiblessView {
             // Style & Layout
 
             // Button content and style
-            button.setTitle(String(index + 1), forState: .Normal)
+            button.setTitle(String(index + 1), for: UIControlState())
             button.backgroundColor = Constants.cornerButtonBackgroundColor
 
             // Height and width of corner buttons are set by a constant
@@ -113,16 +113,16 @@ private extension XiblessView {
 
             // Place each button in its appropriate corner
             switch position {
-            case .UpperLeft:
+            case .upperLeft:
                 button.leftAnchor == leftAnchor
                 button.topAnchor  == topAnchor
-            case .UpperRight:
+            case .upperRight:
                 button.rightAnchor == rightAnchor
                 button.topAnchor   == topAnchor
-            case .LowerLeft:
+            case .lowerLeft:
                 button.leftAnchor   == leftAnchor
                 button.bottomAnchor == bottomAnchor
-            case .LowerRight:
+            case .lowerRight:
                 button.rightAnchor  == rightAnchor
                 button.bottomAnchor == bottomAnchor
             }

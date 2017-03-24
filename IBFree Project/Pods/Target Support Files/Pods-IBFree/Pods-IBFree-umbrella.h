@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double AnchorageVersionNumber;
-FOUNDATION_EXPORT const unsigned char AnchorageVersionString[];
+FOUNDATION_EXPORT double Pods_IBFreeVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_IBFreeVersionString[];
 

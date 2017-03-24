@@ -1,24 +1,26 @@
 //
 //  MainViewController.swift
-//  XIBLessExample
+//  IBFree
 //
-//  Created by John Stricker on 6/20/16.
+//  Created by John Stricker on 3/24/17.
+//  Copyright © 2017 Raizlabs. All rights reserved.
+//
 
 import Anchorage
 import UIKit
 
 final class MainViewController: UIViewController {
 
-    private let xibView = XibView(frame: CGRect.zero)
-    private let xibLessView = XiblessView(style: .CornerButtons)
+    fileprivate let xibView = XibView(frame: CGRect.zero)
+    fileprivate let xibLessView = XiblessView(style: .cornerButtons)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         configureViews()
     }
 
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
 }
@@ -36,7 +38,7 @@ private extension MainViewController {
 
         // Style
 
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.white
 
         // Layout
 
@@ -51,4 +53,3 @@ private extension MainViewController {
         xibLessView.heightAnchor       == xibView.heightAnchor
     }
 }
-
