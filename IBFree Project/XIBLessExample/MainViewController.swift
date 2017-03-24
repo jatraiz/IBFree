@@ -9,8 +9,8 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
-    private let xibView = XibView(frame: CGRect.zero)
-    private let xibLessView = XiblessView(style: .CornerButtons)
+    fileprivate let xibView = XibView(frame: CGRect.zero)
+    fileprivate let xibLessView = XiblessView(style: .cornerButtons)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,7 @@ final class MainViewController: UIViewController {
         configureViews()
     }
 
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
 }
@@ -36,7 +36,7 @@ private extension MainViewController {
 
         // Style
 
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.white
 
         // Layout
 

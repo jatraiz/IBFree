@@ -21,21 +21,21 @@ final class XibView: UIView {
     }
 
     //  Nib setup from http://stackoverflow.com/a/36424842/4092717
-    private func nibSetup() {
-        backgroundColor = .clearColor()
+    fileprivate func nibSetup() {
+        backgroundColor = .clear
 
         view = loadViewFromNib()
         view.frame = bounds
-        view.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.translatesAutoresizingMaskIntoConstraints = true
 
         addSubview(view)
     }
 
-    private func loadViewFromNib() -> UIView {
-        let bundle = NSBundle(forClass: self.dynamicType)
-        let nib = UINib(nibName: String(self.dynamicType), bundle: bundle)
-        let nibView = nib.instantiateWithOwner(self, options: nil).first as! UIView
+    fileprivate func loadViewFromNib() -> UIView {
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
+        let nibView = nib.instantiate(withOwner: self, options: nil).first as! UIView
         
         return nibView
     }
